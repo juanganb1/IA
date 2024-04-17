@@ -1,0 +1,11 @@
+def oneHotEncode(labels):
+  encoded = np.zeros((labels.shape[0], 10))
+  for i, l in enumerate (labels):
+    encoded [i, l] = 1.0
+  
+  return encoded
+
+encoded_y_train = oneHotEncode(y_train)
+encoded_y_test = oneHotEncode(y_test)
+
+print(encoded_y_train[0])
